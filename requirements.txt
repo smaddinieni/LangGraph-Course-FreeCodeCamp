@@ -1,9 +1,13 @@
 langgraph
 langchain
 ipython
-langchain_openai
+langchain-openai
+langchain-google-genai
 langchain_community
 dotenv
 typing
 chromadb
 langchain_chroma
+tavily-python
+ipykernel
+ruff
