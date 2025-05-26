@@ -1,0 +1,23 @@
+{
+  "name": "Python Development Container",
+  "image": "mcr.microsoft.com/devcontainers/python:3.9",
+  "features": {
+    "python": {
+      "version": "3.9"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.pythonPath": "/usr/local/bin/python"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  },
+  "forwardPorts": [8888],
+  "remoteUser": "vscode",
+  "postCreateCommand": "python3 -m venv .venv && source .venv/bin/activate && pip install --upgrade pip && pip install -r requirements.txt"
+}
