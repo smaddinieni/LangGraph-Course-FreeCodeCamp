@@ -7,6 +7,7 @@ from tools import *
 from langchain.chat_models import init_chat_model
 from langgraph.prebuilt import create_react_agent
 from langgraph.graph import StateGraph
+from google import genai
 
 load_dotenv()
 
@@ -15,6 +16,9 @@ if not os.environ.get("GOOGLE_API_KEY"):
 
 if not os.environ.get("OPENAI_API_KEY"):
     os.environ["OPENAI_API_KEY"] = getpass.getpass("Enter API key for OpenAI: ")
+
+GOOGLE_API_KEY=os.getenv("GOOGLE_API_KEY")
+client = genai.Client(api_key=GOOGLE_API_KEY)
 
 # LLm models
 model4omini = init_chat_model(

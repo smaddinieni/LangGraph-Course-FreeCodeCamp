@@ -11,3 +11,5 @@ langchain_chroma
 tavily-python
 ipykernel
 ruff
+google-genai
+moviepy
